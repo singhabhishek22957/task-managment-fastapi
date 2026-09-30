@@ -25,8 +25,17 @@ class AuthMiddleware(BaseHTTPMiddleware):
 
         # get authorization header 
         authorization = request.headers.get("Authorization")
+        access_token = request.cookies.get("access_token")
+        token = None
+        if  authorization :
+            scheme , t = authorization.split(" ",1)
+            if scheme.lower() != "bearer":
+                raise ValueError()
+            token = t
+        elif access_token:
+            token = access_token
 
-        if not authorization:
+        else:
             return JSONResponse(
                 status_code=401,
                 content={
@@ -37,13 +46,10 @@ class AuthMiddleware(BaseHTTPMiddleware):
                     },
                 },
             )
-
         try:
-            scheme , token = authorization.split(" ",1)
+            # scheme , token = authorization.split(" ",1)
 
-            if scheme.lower() != "bearer":
-                raise ValueError()
-
+    
             payload = decode_access_token(token)
 
             user_id = payload.get("sub")

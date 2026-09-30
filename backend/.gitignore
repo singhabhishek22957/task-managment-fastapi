@@ -1,0 +1,54 @@
+# Virtual environment
+myvenv/
+venv/
+env/
+.venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# IDE
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Testing / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Logs
+*.log
+
+# Build / distribution
+build/
+dist/
+*.egg-info/
+
+# FastAPI / Uvicorn
+.uvicorn/
+
+# MongoDB local files
+*.bson
+*.wt
+
+# Temporary files
+*.tmp
+*.temp
+
+# Secrets / certificates
+*.pem
+*.key
+
+# Jupyter
+.ipynb_checkpoints/

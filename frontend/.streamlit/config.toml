@@ -1,0 +1,8 @@
+# .streamlit/config.toml
+
+[server]
+runOnSave = true
+port = 8501
+
+[browser]
+gatherUsageStats = false

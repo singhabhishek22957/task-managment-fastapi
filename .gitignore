@@ -1,54 +1,103 @@
-# Virtual environment
-myvenv/
-venv/
-env/
-.venv/
-
-# Python cache
+# ==========================================
+# Python
+# ==========================================
 __pycache__/
 *.py[cod]
 *$py.class
+*.so
 
-# Environment variables
+# ==========================================
+# Virtual Environments
+# ==========================================
+venv/
+env/
+.venv/
+ENV/
+myenv/
+
+# ==========================================
+# Environment Variables / Secrets
+# ==========================================
 .env
 .env.*
 !.env.example
 
-# IDE
+# ==========================================
+# Streamlit
+# ==========================================
+.streamlit/secrets.toml
+.streamlit/cache/
+
+# ==========================================
+# FastAPI / Uvicorn
+# ==========================================
+*.log
+
+# ==========================================
+# IDE / Editors
+# ==========================================
 .vscode/
 .idea/
+*.code-workspace
 
-# OS files
-.DS_Store
-Thumbs.db
+# ==========================================
+# Jupyter
+# ==========================================
+.ipynb_checkpoints/
 
-# Testing / coverage
+# ==========================================
+# Testing / Coverage
+# ==========================================
 .pytest_cache/
 .coverage
 htmlcov/
+.tox/
+.nox/
 
-# Logs
-*.log
-
-# Build / distribution
+# ==========================================
+# Build / Distribution
+# ==========================================
 build/
 dist/
 *.egg-info/
 
-# FastAPI / Uvicorn
-.uvicorn/
+# ==========================================
+# Database
+# ==========================================
+*.db
+*.sqlite
+*.sqlite3
 
-# MongoDB local files
-*.bson
-*.wt
+# ==========================================
+# Logs
+# ==========================================
+logs/
+*.log
 
-# Temporary files
+# ==========================================
+# Temporary Files
+# ==========================================
 *.tmp
 *.temp
+*.swp
+*.swo
 
-# Secrets / certificates
-*.pem
-*.key
+# ==========================================
+# OS Files
+# ==========================================
+.DS_Store
+Thumbs.db
+desktop.ini
 
-# Jupyter
-.ipynb_checkpoints/
+# ==========================================
+# Application Data
+# ==========================================
+uploads/
+downloads/
+generated/
+.cache/
+
+# ==========================================
+# Local Development
+# ==========================================
+*.local

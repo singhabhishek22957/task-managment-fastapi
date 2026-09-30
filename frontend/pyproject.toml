@@ -1,0 +1,15 @@
+[project]
+name = "task-management-app"
+version = "0.1.0"
+description = "Streamlit frontend for Task Management"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "extra-streamlit-components>=0.1.81",
+    "python-dotenv",
+    "requests",
+    "streamlit",
+]
+
+[tool.uv]
+package = false
